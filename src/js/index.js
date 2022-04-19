@@ -12,7 +12,7 @@ document.getElementById('btn-search').addEventListener('click', () => {
 document.getElementById('input-search').addEventListener('keyup', (e) => {
     const userName = e.target.value
     const key = e.which || e.keyCode
-    const isEnterKeyPressed = key === 1
+    const isEnterKeyPressed = key === 13
 
     if(isEnterKeyPressed) {
         if(validateEmptyInput(userName)) return
