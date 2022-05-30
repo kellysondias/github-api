@@ -3,13 +3,16 @@ import {getRepositories} from './services/repositories.js'
 import {user} from './objects/user.js'
 import {screen} from './objects/screen.js'
 
-document.getElementById('btn-search').addEventListener('click', () => {
+const button = document.getElementById('btn-search')
+const inputSearch = document.getElementById('input-search')
+
+button.addEventListener('click', () => {
     const inputUserName = document.getElementById('input-search').value
     if(validateEmptyInput(inputUserName)) return
     getUserData(inputUserName)
 })
 
-document.getElementById('input-search').addEventListener('keyup', (e) => {
+inputSearch.addEventListener('keyup', e => {
     const userName = e.target.value
     const key = e.which || e.keyCode
     const isEnterKeyPressed = key === 13
