@@ -5,4 +5,6 @@ async function getRepositories(userName) {
     return await url.json()
 }
 
+module.exports = getRepositories
+
 export {getRepositories}

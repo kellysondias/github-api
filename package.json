@@ -1,0 +1,23 @@
+{
+  "name": "projeto-fetch-github-api",
+  "version": "1.0.0",
+  "description": "[<img src=\"src/img/desktop.gif\" alt=\"Desktop\">](https://kellysondias.github.io/github-api/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watchAll *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kellysondias/github-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kellysondias/github-api/issues"
+  },
+  "homepage": "https://github.com/kellysondias/github-api#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
