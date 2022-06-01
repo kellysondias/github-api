@@ -8,7 +8,8 @@ const inputSearch = document.getElementById('input-search')
 
 button.addEventListener('click', () => {
     const inputUserName = document.getElementById('input-search').value
-    if(validateEmptyInput(inputUserName)) return getUserData(inputUserName)
+    if(validateEmptyInput(inputUserName)) return 
+    getUserData(inputUserName)
 })
 
 inputSearch.addEventListener('keyup', e => {
@@ -17,7 +18,8 @@ inputSearch.addEventListener('keyup', e => {
     const isEnterKeyPressed = key === 13
 
     if(isEnterKeyPressed) {
-        if(validateEmptyInput(userName)) return getUserData(userName)
+        if(validateEmptyInput(userName)) return
+        getUserData(userName)
     }
 })
 

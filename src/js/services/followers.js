@@ -1,7 +1,8 @@
-/* import {baseUrl} from "../variables"
+import {baseUrl} from './'
 
 async function getFollowers (userName) {
-    const url = await fetch(`https://api.github.com/${userName}/followers`)
+    const url = await fetch(`${userName}`)
+    return await url.json()
 }
 
-export {getFollowers} */
+export {getFollowers}
