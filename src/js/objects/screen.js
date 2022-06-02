@@ -5,7 +5,14 @@ const screen = {
                                     <img src="${user.avatarUrl}">
                                 <div class="data">
                                 <h1>${user.name ?? 'O usuário não possui nome cadastrado :('}</h1>
-                                <p>${user.bio ?? 'O usuário não possui uma biografia cadastrada :('}</p>
+                                <p>${user.bio ?? 'O usuário não possui uma biografia cadastrada :('}
+                                </p>
+                                <div class="followers">
+                                    <i class="fa-solid fa-user-check"></i>
+                                    <span>Seguidores: ${user.followers}</span>
+                                    <i class="fa-solid fa-user-check"></i>
+                                    <span>Seguindo: ${user.following}</span>
+                                </div>
                             </div>
                         </div>`
         let repostoriesItens = ''

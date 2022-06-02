@@ -191,3 +191,11 @@ main {
     padding: 0;
   }
 }
+
+.container .profile-data .info .data .followers {
+  margin-top: 10px;
+}
+
+.container .profile-data .info .data .followers span:first-child {
+  margin-right: 5px;
+}
