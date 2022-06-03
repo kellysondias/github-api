@@ -1,23 +1,31 @@
 const screen = {
     userProfile: document.querySelector('.profile-data'),
     renderUser(user) {
-        this.userProfile.innerHTML = `<div class="info">
-                                    <img src="${user.avatarUrl}">
+        this.userProfile.innerHTML = `<section class="info">
+                                    <a class="profile-link" href="https://github.com/${user.userName}" target="_blank">
+                                        <img src="${user.avatarUrl}">
+                                    </a>
                                     <div class="data">
-                                        <h1>
-                                            ${user.name ?? 'O usuário não possui nome cadastrado :('}
-                                        </h1>
+                                        <a class="profile-link" href="https://github.com/${user.userName}" target="_blank">
+                                            <h1>
+                                                ${user.name ?? 'O usuário não possui nome cadastrado :('}
+                                            </h1>
+                                        </a>
                                         <p>
                                             ${user.bio ?? 'O usuário não possui uma biografia cadastrada :('}
                                         </p>
                                     </div>
-                                </div>
-                                <div class="followers">
-                                    <i class="fa-solid fa-user-check"></i>
-                                    <span>Seguidores: ${user.followers}</span>
-                                    <i class="fa-solid fa-user-check"></i>
-                                    <span>Seguindo: ${user.following}</span>
-                                </div>
+                                    <div class="followers-data">
+                                        <div class="followers">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span>Seguidores: ${user.followers}</span>
+                                        </div>
+                                        <div class="following">
+                                            <i class="fa-solid fa-user-check"></i>
+                                            <span>Seguindo: ${user.following}</span>
+                                        </div>
+                                    </div>
+                                </section>
                                 `
         let repostoriesItens = ''
         user.repositories.forEach(repo => repostoriesItens += `
@@ -25,12 +33,12 @@ const screen = {
         `)
 
         if (user.repositories.length > 0) {
-            this.userProfile.innerHTML += `<div class="repositories section">
+            this.userProfile.innerHTML += `<section class="repositories section">
                                                 <h2>Repositórios</h2>
                                                 <ul>
                                                     ${repostoriesItens}
                                                 </ul>
-                                           </div>`
+                                           </section>`
         } else {
             this.userProfile.innerHTML += '<p>O usuário não possui repositórios :(</p>'
         }

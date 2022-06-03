@@ -31,7 +31,7 @@ main {
 }
 
 .section{
-  padding: 70px 0;
+  padding: 57px 0;
 }
 
 .container {
@@ -66,7 +66,7 @@ main {
   margin: 0 auto;
   padding: 10px;
   border-radius: 7px;
-  border: 1px solid grey;
+  border: 1px solid #808080;
 }
 
 .container header #btn-search {
@@ -76,7 +76,7 @@ main {
   padding: 10px;
   border-radius: 7px;  
   cursor: pointer;
-  border: 1px solid grey;
+  border: 1px solid #808080;
 }
 
 .container header #btn-search:hover {
@@ -103,10 +103,14 @@ main {
   width: 50%;
 }
 
-.container .profile-data .info img{
+.container .profile-data .info .profile-link {
   width: 50%;
+}
+
+.container .profile-data .info .profile-link img{
+  width: 100%;
   border-radius: 50%;
-  border: 10px solid #24292e;
+  border: 10px solid #333;
 }
 
 .container .profile-data .info h1{
@@ -119,6 +123,30 @@ main {
   font-size: 15px;  
   font-weight: 400;
   line-height: 23px;
+}
+
+.container .profile-data .info .followers-data {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 26px auto 0 auto;
+}
+
+.container .profile-data .info .followers-data div {
+  background: rgba( 64, 120, 192, 0.25 );
+  backdrop-filter: blur( 3px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 10px;
+  padding: 20px;
+  -webkit-backdrop-filter: blur( 3px );
+  transition: 0.2s ease-in-out;
+}
+
+.container .profile-data .info .followers-data i {
+  color: #333;
+}
+
+.container .profile-data .info .followers-data .followers {
+  margin-right: 5px;
 }
 
 .container .profile-data .repositories h2{
@@ -190,12 +218,4 @@ main {
     width: 100%;
     padding: 0;
   }
-}
-
-.container .profile-data .info .data .followers {
-  margin-top: 10px;
-}
-
-.container .profile-data .info .data .followers span:first-child {
-  margin-right: 5px;
 }
