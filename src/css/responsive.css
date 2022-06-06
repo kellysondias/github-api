@@ -55,7 +55,8 @@
     }
   
     .container .profile-data .info img,
-    .container .profile-data .info .data
+    .container .profile-data .info .data,
+    .container .profile-data .info .profile-link
     {
       width: 100%;
       padding: 0;
