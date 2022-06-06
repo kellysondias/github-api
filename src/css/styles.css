@@ -80,9 +80,9 @@ main {
 }
 
 .container header #btn-search:hover {
-  background-color: #ff69b4;
-  color: #ffffff;
-  border-color: #ffffff;
+  background-color: #4078c0;
+  color: #f5f5f5;
+  border-color: #fff;
 }
 
 .container .profile-data{
@@ -176,46 +176,4 @@ main {
 
 .container .profile-data.hide{
   display: none;
-}
-
-@media (max-width: 1280px) {
-  .container {
-    flex-direction: column;
-    width: 90%;
-    border-radius: 20px;
-  }
-
-  .container header {
-    width: 100%;
-  }
-
-  .container header h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .container header #input-search,
-  .container header #btn-search
-  {
-    width: 100%;
-  }
-}
-
-@media (max-width: 425px) {
-  main {
-    padding: 15% 0;    
-  }
-
-  .container .profile-data .info img{
-    margin-bottom: 20px;
-  }
-
-  .container .profile-data .info img,
-  .container .profile-data .info .data
-  {
-    width: 100%;
-    padding: 0;
-  }
 }
