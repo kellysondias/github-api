@@ -23,7 +23,7 @@
     }
   }
 
-  @media (max-width: 532px) {
+  @media (max-width: 548px) {
     .container .profile-data .info .followers-data {
       margin: 26px auto 0 auto;
       justify-content: center;
@@ -39,8 +39,25 @@
     }
   }
 
-  @media (max-width: 433px) {
+ /*  @media (max-width: 532px) {
+    .container .profile-data .info .followers-data {
+      margin: 26px auto 0 auto;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .container .profile-data .info .followers-data div {
+      flex-basis: 20px;
+    }
+
+    .container .profile-data .info .followers-data .following {
+      padding: 20px 26px;
+    }
+  } */
+
+  @media (max-width: 443px) {
     .container .profile-data .info .followers-data .followers {
+      margin-right: 3px;
       margin-bottom: 5px;
     }
   }
