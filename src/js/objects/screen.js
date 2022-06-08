@@ -1,7 +1,7 @@
 const screen = {
     userProfile: document.querySelector('.profile-data'),
     renderUser(user) {
-        this.userProfile.innerHTML = `<section class="info">
+        this.userProfile.innerHTML = `<section class="info section">
                                     <a class="profile-link" href="https://github.com/${user.userName}" target="_blank">
                                         <img src="${user.avatarUrl}">
                                     </a>

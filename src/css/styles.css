@@ -31,7 +31,8 @@ main {
 }
 
 .section{
-  padding: 57px 0;
+    padding-bottom: 42px;
+    border-bottom: 1px solid #ccc;
 }
 
 .container {
@@ -97,6 +98,7 @@ main {
   display: flex;  
   flex-wrap: wrap;
   align-items: center;
+  border-top: 1px solid #ccc;
 }
 
 .container .profile-data .info .data{
@@ -105,6 +107,7 @@ main {
 }
 
 .container .profile-data .info .profile-link {
+  margin-top: 43px;
   width: 50%;
 }
 
@@ -148,6 +151,10 @@ main {
 
 .container .profile-data .info .followers-data .followers {
   margin-right: 5px;
+}
+
+.container .profile-data .repositories {
+  padding: 37px 0;
 }
 
 .container .profile-data .repositories h2{

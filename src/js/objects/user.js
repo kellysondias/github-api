@@ -4,6 +4,7 @@ const user = {
     bio: '',
     userName: '',
     repositories: [],
+    activity: [],
     followers: '',
     following: '',
     setInfo(gitHubUser) {
@@ -13,11 +14,13 @@ const user = {
         this.userName = gitHubUser.login
         this.followers = gitHubUser.followers
         this.following = gitHubUser.following
-        
     },
     setRepositories(repositories) {
         this.repositories = repositories
-    }
+    }/* ,
+    setActivity(activity) {
+        this.activity = activity[0].repo.name
+    } */
 }
 
 export {user}
