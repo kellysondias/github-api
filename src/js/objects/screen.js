@@ -42,10 +42,23 @@ const screen = {
         } else {
             this.userProfile.innerHTML += '<p>O usuário não possui repositórios :(</p>'
         }
+
+        let activitiesItens = ''
+        user.activities.forEach(activity => {
+            const activityMessage = activity.payload.commits.forEach(commit => {
+                return `<p>${commit.message}</p>`
+            })
+            activitiesItens += `<li>
+                                    
+                                <li>`
+            console.log(activityMessage)
+        })         
     },
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado :(</h3>"
     }
 }
 
-export {screen}
+export {
+    screen
+}

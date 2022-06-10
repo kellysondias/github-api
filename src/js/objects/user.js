@@ -4,7 +4,7 @@ const user = {
     bio: '',
     userName: '',
     repositories: [],
-    activity: [],
+    activities: [],
     followers: '',
     following: '',
     setInfo(gitHubUser) {
@@ -17,10 +17,10 @@ const user = {
     },
     setRepositories(repositories) {
         this.repositories = repositories
-    }/* ,
+    },
     setActivity(activity) {
-        this.activity = activity[0].repo.name
-    } */
+        this.activities = activity
+    }
 }
 
 export {user}
