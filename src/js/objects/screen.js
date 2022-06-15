@@ -42,23 +42,44 @@ const screen = {
         } else {
             this.userProfile.innerHTML += '<p>O usuário não possui repositórios :(</p>'
         }
-
         let activitiesItens = ''
         user.activities.forEach(activity => {
-            const activityMessage = activity.payload.commits.forEach(commit => {
-                return `<p>${commit.message}</p>`
-            })
-            activitiesItens += `<li>
-                                    
-                                <li>`
-            console.log(activityMessage)
-        })         
+            const name = activity.repo.name
+            if (activity.type === 'PushEvent') {
+                const commitList = activity.payload.commits
+                let commitMessage = ''
+                if (commitList) commitList.forEach(commit => {commitMessage = commit.message} )
+                activitiesItens += `
+                                                <span class="act-name">${name}:</span>
+                                                <span class="act-description">${commitMessage}</span>
+                `
+            } else if (activity.type === 'CreateEvent') {
+                const description = activity.payload.description
+                activitiesItens += `
+                                                <span class="act-name">${name}:</span>
+                                                <span class="act-description">${description}</span>
+                `
+            }
+        })
+
+        if (user.activities.length > 0) {
+            this.userProfile.innerHTML += (`
+                                            <section class="activities">
+                                                <ul>
+                                                    ${activitiesItens}
+                                                </ul>
+                                            </section>
+            ` )
+        } else {
+            this.userProfile.innerHTML = "<p>O usuário não possui atividades :(</p>"
+        }
     },
+
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado :(</h3>"
     }
 }
 
 export {
-    screen
+    screen 
 }
