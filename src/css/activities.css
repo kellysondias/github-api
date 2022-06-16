@@ -1,0 +1,15 @@
+.activities {
+    width: 100%;
+}
+
+.activities .activity {
+    display: flex;
+    flex-flow: row wrap;
+    color: #333;
+}
+
+.activities .activity span {
+    font-weight: 700;
+    color: #000;
+    margin-right: 5px;
+}

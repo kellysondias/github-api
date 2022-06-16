@@ -24,6 +24,10 @@ main {
   padding: 50px 0 0;      
 }
 
+.not-found-message {
+  margin-top: 20px;
+}
+
 .devicon-github-original{
   font-size: 60px;
   margin-bottom: 30px;
@@ -33,6 +37,12 @@ main {
 .section{
     padding-bottom: 42px;
     border-bottom: 1px solid #ccc;
+}
+
+.section h2 {
+  margin-top: 37px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .container {
@@ -99,6 +109,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   border-top: 1px solid #ccc;
+  margin-top: 0;
 }
 
 .container .profile-data .info .data{
@@ -151,15 +162,6 @@ main {
 
 .container .profile-data .info .followers-data .followers {
   margin-right: 5px;
-}
-
-.container .profile-data .repositories {
-  padding: 37px 0;
-}
-
-.container .profile-data .repositories h2{
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .container .profile-data .repositories ul{

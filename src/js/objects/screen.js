@@ -40,7 +40,7 @@ const screen = {
                                                 </ul>
                                            </section>`
         } else {
-            this.userProfile.innerHTML += '<p>O usuário não possui repositórios :(</p>'
+            this.userProfile.innerHTML += "<p class='not-found-message'>O usuário não possui repositórios :(</p>"
         }
         let activitiesItens = ''
         user.activities.forEach(activity => {
@@ -50,28 +50,27 @@ const screen = {
                 let commitMessage = ''
                 if (commitList) commitList.forEach(commit => {commitMessage = commit.message} )
                 activitiesItens += `
-                                                <span class="act-name">${name}:</span>
-                                                <span class="act-description">${commitMessage}</span>
+                                    <li class="activity"><span>${name}:</span> ${commitMessage}</li>
                 `
             } else if (activity.type === 'CreateEvent') {
                 const description = activity.payload.description
                 activitiesItens += `
-                                                <span class="act-name">${name}:</span>
-                                                <span class="act-description">${description}</span>
+                                    <li class="activity"><span>${name}:</span> ${description}</li>
                 `
             }
         })
 
         if (user.activities.length > 0) {
             this.userProfile.innerHTML += (`
-                                            <section class="activities">
+                                            <section class="activities section">
+                                                <h2>Atividades</h2>
                                                 <ul>
                                                     ${activitiesItens}
                                                 </ul>
                                             </section>
             ` )
         } else {
-            this.userProfile.innerHTML = "<p>O usuário não possui atividades :(</p>"
+            this.userProfile.innerHTML += "<p class='not-found-message'>O usuário não possui atividades recentes :(</p>"
         }
     },
 
