@@ -37,6 +37,14 @@
     .container .profile-data .info .followers-data .following {
       padding: 20px 26px;
     }
+
+    .activities .activity span {
+      margin-right: 0;
+    }
+
+    .activities .activity {
+      margin-bottom: 5px;
+    }
   }
 
   @media (max-width: 443px) {

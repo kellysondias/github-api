@@ -6,11 +6,12 @@
 .activities .activity {
     display: flex;
     flex-flow: row wrap;
+    text-align: left;
     color: #333;
 }
 
 .activities .activity span {
     font-weight: 700;
     color: #000;
-    margin-right: 5px;
+    margin-right: 3px;
 }

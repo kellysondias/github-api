@@ -50,7 +50,7 @@ const screen = {
                 let commitMessage = ''
                 if (commitList) commitList.forEach(commit => {commitMessage = commit.message} )
                 activitiesItens += `
-                                    <li class="activity"><span>${name}:</span> ${commitMessage}</li>
+                                    <li class="activity"><span>${name}:</span> "${commitMessage}"</li>
                 `
             } else if (activity.type === 'CreateEvent') {
                 const description = activity.payload.description
@@ -79,6 +79,4 @@ const screen = {
     }
 }
 
-export {
-    screen 
-}
+export { screen }
