@@ -43,8 +43,6 @@ async function getUserData(userName) {
 
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
-    user.setActivity(activitiesResponse)
+    user.setActivities(activitiesResponse)
     screen.renderUser(user)
 }
-
-console.log(user)

@@ -28,9 +28,33 @@ const screen = {
                                 </section>
                                 `
         let repostoriesItens = ''
-        user.repositories.forEach(repo => repostoriesItens += `
-                                                                <li><a href="${repo.html_url}" target="_blank">${repo.name}</a><li>
-        `)
+        user.repositories.forEach(repository => {
+            repostoriesItens += `
+                                    <li class="repo-data">
+                                        <a href="${repository.html_url}" target="_blank">
+                                            <p>${repository.name}</p>
+                                            <ul class="repo-itens">
+                                                <li>
+                                                    <i class="fa-solid fa-code-fork"></i>
+                                                    ${repository.forks_count ?? "<i class='fa-solid fa-question'></i>"}
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    ${repository.stargazers_count ?? "<i class='fa-solid fa-question'></i>"}
+                                                </li>
+                                                <li>
+                                                    <i class="fa-regular fa-eye"></i>
+                                                    ${repository.watchers_count ?? "<i class='fa-solid fa-question'></i>"}
+                                                </li>
+                                                <li>
+                                                    <i class="fa-solid fa-code"></i>
+                                                    ${repository.language ?? "<i class='fa-solid fa-question'></i>"}
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    <li>
+                                `
+        })
 
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `<section class="repositories section">
@@ -73,7 +97,6 @@ const screen = {
             this.userProfile.innerHTML += "<p class='not-found-message'>O usuário não possui atividades recentes :(</p>"
         }
     },
-
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado :(</h3>"
     }

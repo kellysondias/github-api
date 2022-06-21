@@ -1,0 +1,37 @@
+.container .profile-data .repositories ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.container .profile-data .repositories ul li a{
+    padding: 20px;
+    border: 1px solid #808080;  
+    margin: 20px;
+    display: block;
+    border-radius: 7px;
+    transition: 0.3s ease-in-out;
+}
+  
+.container .profile-data .repositories ul li a:hover{
+    background-color: #4078c0;
+    color: #fff
+}
+
+.container .profile-data .repositories .repo-data .repo-itens {
+    margin-top: 8px;
+}
+
+.container .profile-data .repositories .repo-data ul li {
+    border-radius: 3px;
+    padding: 0 3px;
+    background: rgba( 64, 120, 192, 0.25 );
+    backdrop-filter: blur( 3px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-right: 5px;
+    -webkit-backdrop-filter: blur( 3px );
+}
+
+.container .profile-data .repositories .repo-data ul li:last-child {
+    margin: 0;
+}

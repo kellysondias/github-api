@@ -4,10 +4,6 @@ const user = {
     bio: '',
     userName: '',
     repositories: [],
-    forks: [],
-    stars: [],
-    watchers: [],
-    language: [],
     activities: [],
     followers: '',
     following: '',
@@ -21,13 +17,9 @@ const user = {
     },
     setRepositories(repositories) {
         this.repositories = repositories
-        this.forks = repositories.forks_count
-        this.stars = repositories.stargazers_count
-        this.watchers = repositories.watchers_count
-        this.language = repositories.language
     },
-    setActivity(activity) {
-        this.activities = activity
+    setActivities(activities) {
+        this.activities = activities
     }
 }
 
