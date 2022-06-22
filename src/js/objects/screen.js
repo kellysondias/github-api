@@ -68,18 +68,16 @@ const screen = {
         }
         let activitiesItens = ''
         user.activities.forEach(activity => {
-            const name = activity.repo.name
             if (activity.type === 'PushEvent') {
                 const commitList = activity.payload.commits
                 let commitMessage = ''
                 if (commitList) commitList.forEach(commit => {commitMessage = commit.message} )
                 activitiesItens += `
-                                    <li class="activity"><span>${name}:</span> "${commitMessage}"</li>
+                                    <li class="activity"><span>${activity.repo.name}:</span> "${commitMessage ?? "<i class='fa-solid fa-question unfound-message'></i>"}"</li>
                 `
             } else if (activity.type === 'CreateEvent') {
-                const description = activity.payload.description
                 activitiesItens += `
-                                    <li class="activity"><span>${name}:</span> ${description}</li>
+                                    <li class="activity"><span>${activity.repo.name}:</span> ${activity.payload.description ?? "<i class='fa-solid fa-question unfound-message'></i>"}</li>
                 `
             }
         })
