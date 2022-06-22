@@ -24,7 +24,7 @@
 
 .container .profile-data .repositories .repo-data ul li {
     border-radius: 3px;
-    padding: 0 3px;
+    padding: 1px 4px;
     background: rgba( 64, 120, 192, 0.25 );
     backdrop-filter: blur( 3px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
